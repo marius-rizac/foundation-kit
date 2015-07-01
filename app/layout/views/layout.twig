@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <title>{% block page_title %}Foundation test{% endblock %}</title>
+    {% block css %}
+        <link rel="stylesheet" href="/bower/foundation/css/normalize.css"/>
+        <link rel="stylesheet" href="/bower/foundation/css/foundation.css"/>
+        <link rel="stylesheet" href="/bower/fontawesome/css/font-awesome.css"/>
+        <link rel="stylesheet" href="/css/zed.css"/>
+    {% endblock %}
+</head>
+<body>
+
+<div class="row-fluid">
+    {% include 'part/top-navbar.twig' %}
+</div>
+
+<div class="row-fluid">
+    <div class="small-12 column">
+        <div class="desp-20"></div>
+        {% include 'part/form.twig' %}
+        {% include 'part/grid.twig' %}
+        {% include 'part/joyride.twig' %}
+    </div>
+</div>
+
+<ol class="joyride-list" data-joyride>
+    <li data-id="form1" data-text="Next" data-options="tip_location: bottom;tip_animation:fade; prev_button: false">
+        <p>Hello and welcome to Spryker Framework.<br>Here we have the first form</p>
+    </li>
+    <li data-id="form2" data-class="custom so-awesome" data-text="Next" data-prev-text="Prev">
+        <h4>Form 2</h4>
+        <p>Here is an example of form with custom fields</p>
+    </li>
+    <li data-id="form3" data-button="Next" data-prev-text="Prev" data-options="tip_location:top;tip_animation:fade">
+        <h4>Form 3</h4>
+        <p>Here is an example with a form that has errors on fields</p>
+    </li>
+    <li data-id="grid" data-button="Next" data-prev-text="Prev" data-options="tip_location:top;tip_animation:fade">
+        <p>Here we have a grid</p>
+    </li>
+    <li data-id="pagination" data-button="Next" data-prev-text="Prev" data-options="tip_location:top;tip_animation:fade">
+        <p>This is the pagination</p>
+    </li>
+    <li data-button="End" data-prev-text="Prev">
+        <h4>Good bye.</h4>
+        <p>I hope you like it</p>
+    </li>
+</ol>
+
+{% block js %}
+    <script src="/bower/jquery/dist/jquery.js"></script>
+    <script src="/bower/foundation/js/foundation.min.js"></script>
+    <script src="/bower/jquery.cookie/jquery.cookie.js"></script>
+    <script src="/bower/fastclick/lib/fastclick.js"></script>
+    <script src="/bower/modernizr/modernizr.js"></script>
+    <script>
+    $(function(){
+        $(document).foundation().foundation('joyride', 'start');
+    });
+    </script>
+{% endblock %}
+
+</body>
+</html>

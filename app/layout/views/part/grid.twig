@@ -1,0 +1,28 @@
+<div class="desp-20"></div>
+<table id="grid">
+    <caption>What is all about in this grid</caption>
+    <thead>
+    <tr>
+        <th width="30">#</th>
+        <th>Article title</th>
+        <th>Category</th>
+        <th class="right">Options</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for i in 1..20 %}
+    <tr>
+        <td>{{ i }}</td>
+        <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+        <td>Content Goes Here</td>
+        <td class="text-right">
+            <a href=""><i class="fa fa-pencil-square-o"></i></a>
+            <a href=""><i class="fa {% if random([1,2]) == 1 %}fa-check-circle{% else %}fa-circle-o{% endif %}"></i></a>
+            <a href=""><i class="fa fa-trash-o"></i></a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% include 'part/pagination.twig' %}
