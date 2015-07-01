@@ -1,0 +1,13 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ error_title|default('Error 404 Page not found') }}{% endblock %}
+
+{% block body %}
+    <div class="alert alert-danger">
+        <h3>{{ error_title|default('Error 404 Page not found') }}</h3>
+        {{ error | raw }}
+        <p class="text-center">
+            <a class="btn btn-primary" href="/"><span class="glyphicon glyphicon-chevron-left"></span> Back to homepage</a>
+        </p>
+    </div>
+{% endblock %}

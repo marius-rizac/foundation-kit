@@ -1,0 +1,16 @@
+{
+    "require": {
+        "twig/twig": "1.*",
+        "oyejorge/less.php": "~1.5",
+        "symfony/yaml": "2.7.*@dev",
+        "symfony/http-foundation": "2.7.*@dev"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "app/libs/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": "phpunit"
+    }
+}

@@ -1,0 +1,12 @@
+imports:
+    - { resource: routes_help.yml }
+
+homepage:
+    path: /
+
+articles:
+    path: /articles
+
+articles_details:
+    path: /articles/details/{id}/{title}
+    defaults: { id: 0, title: 'default article' }

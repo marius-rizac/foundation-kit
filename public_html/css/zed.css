@@ -1,0 +1,18 @@
+.fa-2 {
+    font-size: 1.5em;
+}
+table {
+    width: 100%;
+}
+.desp-20 {
+    height: 20px; line-height: 0; clear: both; overflow: hidden;
+}
+table > caption {
+    text-align: left;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    padding: 3px 10px;
+}
+tr:hover > td {
+    background: #E7EFF9;
+}

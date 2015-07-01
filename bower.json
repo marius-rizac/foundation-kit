@@ -1,0 +1,9 @@
+{
+  "name": "foundation test",
+  "homepage": "http://localhost",
+  "private": false,
+  "dependencies": {
+    "foundation": "~5.5.2",
+    "fontawesome": "~4.3.0"
+  }
+}
